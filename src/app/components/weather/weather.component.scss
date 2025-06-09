@@ -1,0 +1,21 @@
+#weather {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .coming-soon {
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 24px;
+    }
+  }
+}
