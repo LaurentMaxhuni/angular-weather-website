@@ -1,13 +1,16 @@
-<div class="navbar container">
-  <div>
+<div class="navbar container" [class.open]="menuOpen">
+  <div class="brand">
     <img src="/transparent.png" class="icon" alt="SkyCast logo" />
   </div>
-  <div class="links">
+  <button class="menu-button" aria-label="Toggle navigation" (click)="toggleMenu()">
+    &#9776;
+  </button>
+  <div class="links" [class.show]="menuOpen">
     <nav aria-label="primary">
       <ul>
-        <li><a href="#header">Home</a></li>
-        <li><a href="#weather">Weather</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#header" (click)="toggleMenu()">Home</a></li>
+        <li><a href="#weather" (click)="toggleMenu()">Weather</a></li>
+        <li><a href="#contact" (click)="toggleMenu()">Contact</a></li>
       </ul>
     </nav>
   </div>
