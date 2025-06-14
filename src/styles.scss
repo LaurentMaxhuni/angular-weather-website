@@ -11,6 +11,7 @@
 body {
   background-color: #81D4FA;
   color: white;
+  overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,7 +22,6 @@ body {
 }
 
 app-root {
-  height: 100dvh;
   display: flex;
   flex-direction: column;
   gap: 20px;

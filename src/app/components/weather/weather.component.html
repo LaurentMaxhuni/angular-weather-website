@@ -1,4 +1,39 @@
 <div id="weather">
-  <h2>Your Forecast</h2>
-  <p class="coming-soon">Weather data coming soon...</p>
+  <h2>{{ date() }}</h2>
+  <div class="input">
+    <input
+      #searchBar
+      class="search-bar"
+      type="text"
+      placeholder="Enter city…"
+    />
+    <button (click)="searchCity(searchBar)" class="search">
+      <img src="/search.svg" />
+    </button>
+  </div>
+  <div class="card" *ngIf="temp() || icon()">
+    <div>
+      <h2 class="city">{{ city() | titlecase }}</h2>
+      <img class="icon" src="{{ icon() }}" alt="Weather icon" />
+    </div>
+    <h2 class="temp">
+      <img src="/thermometer.png" height="40px" />{{ temp() }}°C
+    </h2>
+    <p style="font-size: 24px !important; font-weight: bold">Feels Like - {{ feelsLike() }} °C</p>
+    <p class="description">Description - {{ description() }}</p>
+    <p class="humidity">
+      Humidity - {{ humidity()
+      }}%
+    </p>
+    <p class="uv">
+      UV Index - {{ uvIndex() }}
+    </p>
+    <p class="wind-speed">
+      Wind Speed - {{ windSpeed() }}
+    </p>
+    <p class="wind-direction">
+      Wind Direction -
+      {{ windDirection() }}
+    </p>
+  </div>
 </div>

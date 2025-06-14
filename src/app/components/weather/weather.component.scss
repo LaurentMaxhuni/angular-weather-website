@@ -1,16 +1,83 @@
 #weather {
-  width: 90%;
-  max-width: 800px;
+  width: 70%;
+  padding: 20px;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h2 {
     font-size: 32px;
     margin-bottom: 10px;
   }
 
-  .coming-soon {
-    font-size: 18px;
+  .input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .search-bar {
+      border-radius: 25px;
+      padding: 10px 20px;
+      border: none;
+
+      &::placeholder {
+        font-size: 15px;
+      }
+
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+
+    .search {
+      border-radius: 25px;
+      padding: 10px 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #81d4fa;
+      display: flex;
+      align-items: center;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-color: #4fc3f7;
+        transition: all 0.1s ease-in-out;
+      }
+    }
+  }
+
+  .card {
+    height: 500px !important;
+    width: 400px !important;
+    margin-top: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #0f6b96 !important;
+    padding: 20px;
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    p, h2 {
+      display: flex;
+      align-items: center;
+      justify-self: center;
+    }
+
+    p {
+      font-size: 20px !important;
+      gap: 5px;
+    }
+
+    .icon {
+      width: 100px;
+      height: 100px;
+      scale: 1.3;
+    }
   }
 
   @media (max-width: 768px) {
