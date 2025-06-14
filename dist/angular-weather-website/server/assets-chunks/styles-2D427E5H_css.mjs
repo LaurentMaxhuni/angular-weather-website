@@ -1,0 +1,2 @@
+export default `*{margin:0;padding:0;box-sizing:border-box;outline:none;font-family:sans-serif}body{background-color:#81d4fa;color:#fff;overflow-x:hidden}@media (prefers-color-scheme: dark){body{background-color:#002136;color:#fff}}app-root{display:flex;flex-direction:column;gap:20px}.container{width:100%;max-width:1200px;margin:0 auto}
+`;
